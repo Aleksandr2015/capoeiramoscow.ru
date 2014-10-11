@@ -328,14 +328,17 @@ h1,h2,h3,h4,h5,h6 {
 .top-contacts-name {
 	font-size:30px;
 	font-weight:800;
+    margin-bottom: 5px;
 }
 
 .top-contacts-alias {
 	font-size:25px;
+    margin-bottom: 5px;
 }
 
 .top-contacts-phone {
 	font-size:30px;
+    margin-bottom: 10px;
 }
 
 /* Main Slider Styles / Start */

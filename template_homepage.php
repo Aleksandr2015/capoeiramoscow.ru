@@ -196,7 +196,8 @@ Template Name: Главная
 						<p class="top-contacts-name text-right">Алексей Найденов</p>
 						<p class="top-contacts-alias text-right">(Falcao, Сокол)</p>
 						<p class="top-contacts-phone text-right">8 (926) 671-39-29</p>
-						<p class="top-contacts-phone text-right">falcaoabada@gmail.com</p>
+						<p class="text-center c-font-md c-simmetr">По вопросам тренировок для взрослых и тренировок для детей</p>
+						<p class="top-contacts-phone text-right">falcaoabada@gmail.com</p>						
 <!--						<a class="btn btn-lg btn-danger" href="#">Задать вопрос</a>-->
 					</div>
 					<div class="col-xs-3 col-md-3 col-sm-3 col-xs-3">
@@ -205,10 +206,11 @@ Template Name: Главная
 					<div class="col-xs-3 col-md-3 col-sm-3 col-xs-3">
 						<img src="<?php echo get_template_directory_uri();?>/images/tatyana_naydenova.png" alt="Татьяна Найденова" class="img-responsive"/>
 					</div>
-					<div class="col-xs-3 col-md-3 col-sm-3 col-xs-3" style="padding-top:35px;">
+					<div class="col-xs-3 col-md-3 col-sm-3 col-xs-3" style="padding-top:15px;">
 						<p class="top-contacts-name text-left">Татьяна Найденова</p>
 						<p class="top-contacts-alias text-left">(Coruga, Сова)</p>
 						<p class="top-contacts-phone text-left">8 (926) 671-39-29</p>
+						<p class="c-font-md"><b>Только</b> по вопросам сотрудничества, организации шоу программ, детских лагерей, воскресных занятий с детьми</p>
 <!--						<a class="btn btn-lg btn-danger" href="#">Задать вопрос</a>-->
 						<p class="top-contacts-phone text-left">tank1986@inbox.ru</p>
 						
