@@ -209,7 +209,7 @@ Template Name: Главная
 					<div class="col-xs-3 col-md-3 col-sm-3 col-xs-3" style="padding-top:15px;">
 						<p class="top-contacts-name text-left">Татьяна Найденова</p>
 						<p class="top-contacts-alias text-left">(Coruga, Сова)</p>
-						<p class="top-contacts-phone text-left">8 (926) 671-39-29</p>
+						<p class="top-contacts-phone text-left">8 (926) 544-21-16</p>
 						<p class="c-font-md"><b>Только</b> по вопросам сотрудничества, организации шоу программ, детских лагерей, воскресных занятий с детьми</p>
 <!--						<a class="btn btn-lg btn-danger" href="#">Задать вопрос</a>-->
 						<p class="top-contacts-phone text-left">tank1986@inbox.ru</p>
@@ -221,75 +221,27 @@ Template Name: Главная
 		<!-- Top contacts / End -->
 		
         <?php include(TEMPLATEPATH . '/maps-address.php'); ?>				
-		
-		<!-- Slider / Start -->		
-		<!--<div class="container">
-			<div class="row">
-				<div id="myCarousel" class="carousel capoeira-slider">					
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-					</ol>					
-					<div class="carousel-inner">
-						<div class="item active">
-							<img width="100%" class="img-responsive" src="<?php # echo get_template_directory_uri();?>/images/slider.png" alt="" />
-							<div class="carousel-caption" style="width:100%;left:3%;right:3%;">
-								<h1>Caption 1</h1>
-								<p class="text-left">Рады вам на сайте официального российского представительства бразильской школы капоэйра <!--noindex--><!--<a title="ABADA Capoeira Brasil" href="http://www.abadacapoeira.com.br/" target="_blank" rel="nofollow">ABADA Capoeira!</a>--><!--/noindex--><!--</p>
-								<p class="text-left">Наша школа давно переросла национальные рамки, сейчас ABADA Capoeira — это более 40 стран и более 60.000 участников!</p>
-								<p class="text-left">В России ABADA Capoeira — это почти два десятка городов. Самое крупное российское подразделение школы капоэйра находится в Москве, представляет его Алексей Найденов (Graduado Falcão, Градуаду Фалкао — Сокол).</p>
-								<p class="text-left">Основной вид занятий в нашей школе — это, конечно, <a title="Тренировки" href="/trainings.html">капоэйра</a>, бразильское боевое искусство, возникшее из слияния акробатики, танца и знания силовых приемов.</p>
-								<p class="text-left">Капоэйра — это игра, которая помогает развивать как тело, так и дух. Хорошая физическая форма, развитое чувство ритма и раскрепощенность в общении — все это дают занятия в нашей школе капоэйра.</p>
-								<p class="text-left">Если у вас хорошая подготовка, вы без проблем можете присоединиться к уже занимающейся группе. В течение года мы проводим набор в группы для начинающих взрослых, а также предлагаем занятия <a title="Детские занятия" href="/childrens.html">капоэйрой для детей</a>.</p>
-
-								<p>Мы ответим на все вопросы — вам стоит только позвонить или написать!</p>
-							</div>
-						</div>
-						<div class="item">
-							<iframe width="100%" height="480" src="//www.youtube.com/embed/ATHwg_wfuxA" frameborder="0" allowfullscreen></iframe>
-							<div class="carousel-caption">
-								<h1>Caption 2</h1>
-							</div>
-						</div>
-						<div class="item">
-							<img width="100%" class="img-responsive" src="<?php # echo get_template_directory_uri();?>/images/slider.png" alt="" />
-						</div>
-					</div>
-					
-					<a class="left carousel-control" style="z-index:11;" href="#myCarousel" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-					</a>
-					<a class="right carousel-control" style="z-index:11;" href="#myCarousel" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-					</a>
-				</div>--><!-- #myCarousel .carousel -->
-
-				<!--<img src="<?php # echo get_template_directory_uri();?>/images/slider.png" alt="Слайдер" width="100%" />-->
-			<!--</div>--><!-- .row -->
-		<!--</div>--><!-- .container -->
-		<!-- Slider / End -->
 				
 		<!-- Directions / Start -->
 		<div class="container">
 			<div class="row our-directions">
 				<div class="col-xs-12 col-md-12 col-sm-12 col-xs-12">			
-					<h2 class="text-center">Наши направления</h2>
+					<h2 class="text-center mt40 mb20">Наши направления</h2>
 				</div>
 				<div class="col-xs-4 col-md-4 col-sm-4 col-xs-4">
-					<h3 class="text-center">Капоэйра для взрослых</h3>
+					<h3 class="text-center fs18">Капоэйра для взрослых</h3>
 					<a href="/trainings/beginners.html" class="thumbnail">
 						<img src="<?php echo get_template_directory_uri();?>/images/for_adults.png" alt="Капоэйра для взрослых">
 					</a>
 				</div><!-- .col- -->
 				<div class="col-xs-4 col-md-4 col-sm-4 col-xs-4">
-					<h3 class="text-center">Капоэйра для детей</h3>
+					<h3 class="text-center fs18">Капоэйра для детей</h3>
 					<a href="/childrens.html" class="thumbnail">
 						<img src="<?php echo get_template_directory_uri();?>/images/for_childrens.png" alt="Капоэйра для детей">
 					</a>
 				</div><!-- .col- -->
 				<div class="col-xs-4 col-md-4 col-sm-4 col-xs-4">
-					<h3 class="text-center">Шоу группа</h3>
+					<h3 class="text-center fs18">Шоу группа</h3>
 					<a href="/group_show.html" class="thumbnail">
 						<img src="<?php echo get_template_directory_uri();?>/images/show_group.png" alt="Шоу группа">
 					</a>
@@ -301,7 +253,7 @@ Template Name: Главная
 		<!-- News / Start -->
 		<div class="container">
 			<div class="row news">
-				<h2 class="text-center">Новости</h2>
+				<h2 class="text-center mt40 mb20">Новости</h2>
 				<div class="col-xs-4 text-center">
                     <img class="thumbnail" src="<?php echo get_template_directory_uri();?>/images/capoeira_banner_september_girls.jpg" alt="Капоэйра для девушек" height="257">				    
 				</div>				
@@ -348,7 +300,7 @@ Template Name: Главная
 		<!-- Video / Start -->
 		<div class="container">
 			<div class="row video">
-				<h2 class="text-center">Видео</h2>
+				<h2 class="text-center mt40 mb20">Видео</h2>
 			</div>			
 			<hr>
 			<div class="row video">
@@ -385,7 +337,7 @@ Template Name: Главная
 		<!-- Photo / Start -->
 		<div class="container">
 			<div class="row photo">
-				<h2 class="text-center">Фото</h2>				
+				<h2 class="text-center mt40 mb20">Фото</h2>				
 			</div>			
 			<hr>
 			<div class="row photo">
@@ -422,7 +374,7 @@ Template Name: Главная
 		<!-- Наши контакты / Начало -->
 		<div class="container">
 			<div class="row" style="margin-top:20px;">
-				<h2 class="text-center">Наши контакты</h2>
+				<h2 class="text-center mt40 mb20">Наши контакты</h2>
 				<div class="col-xs-4 col-md-4 col-sm-4 col-xs-4 col-xs-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
 					<img src="<?php echo get_template_directory_uri();?>/images/aleksey_naydenov.png" alt="Алексей Найденов" class="img-responsive" style="margin:0 auto;" />
 					<div class="c-wrap">

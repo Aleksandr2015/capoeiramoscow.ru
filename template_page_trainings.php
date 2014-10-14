@@ -3,6 +3,10 @@ Template Name: Тренировки
 */?>
 <?php get_header(); ?>
 	<body <?php body_class('');?>>
+     
+        <!-- Social Buttons Fixed Left / Start -->
+		<?php include (TEMPLATEPATH . '/social_buttons.php'); ?>
+		<!-- Social Buttons Fixed Left / End --> 
       
        <!-- Modal big-filevskaya-01 -->
         <div class="modal fade" id="big-filevskaya-01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

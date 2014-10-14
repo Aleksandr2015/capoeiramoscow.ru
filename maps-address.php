@@ -2,7 +2,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-12 col-sm-12 col-xs-12">
-					<h2 class="text-center">Занятия проходят по следующим адресам:</h2>
+					<h2 class="text-center mt40 mb20">Занятия проходят по следующим адресам:</h2>
 				</div>
 			</div>
 			<div class="row" style="margin-top:20px;">

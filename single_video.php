@@ -1,5 +1,10 @@
 <?php get_header(); ?>
 	<body <?php body_class('');?>>
+       
+        <!-- Social Buttons Fixed Left / Start -->
+		<?php include (TEMPLATEPATH . '/social_buttons.php'); ?>
+		<!-- Social Buttons Fixed Left / End -->
+              
         <?php include(TEMPLATEPATH . '/nav.php'); ?>
 		
         <?php include(TEMPLATEPATH . '/logo-and-flag-block.php'); ?>		
