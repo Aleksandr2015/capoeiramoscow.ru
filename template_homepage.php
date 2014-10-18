@@ -254,6 +254,7 @@ Template Name: Главная
 		<div class="container">
 			<div class="row news">
 				<h2 class="text-center mt40 mb20">Новости</h2>
+<!--
 				<div class="col-xs-4 text-center">
                     <img class="thumbnail" src="<?php echo get_template_directory_uri();?>/images/capoeira_banner_september_girls.jpg" alt="Капоэйра для девушек" height="257">				    
 				</div>				
@@ -263,14 +264,15 @@ Template Name: Главная
 				<div class="col-xs-4 text-center">
 				    <img class="thumbnail" src="<?php echo get_template_directory_uri();?>/images/capoeira_banner_childrens.jpg" alt="Капоэйра для детей">
 				</div>
+-->
 				<?php
 					global $post; 
 					$args = array('category' => 1, 'showposts' => 4);
 					$custom_posts = get_posts($args);
 					foreach($custom_posts as $post) : setup_postdata($post); 
 				?>
-					<div class="col-xs-3 col-md-3 col-sm-3 col-xs-3">
-						<a href="<?php the_permalink(); ?>"><h3 class="news-header text-center"><?php the_title(); ?></h3></a>
+					<div class="col-xs-3 news-col">
+						<a href="<?php the_permalink(); ?>"><h3 class="news-header"><?php echo wp_trim_words( get_the_title(), 5 ); ?></h3></a>
 						<p class="news-date"><?php echo get_the_date('d.m.Y'); ?></p>
 						<a href="<?php the_permalink(); ?>" class="thumbnail">
 							<?php 
@@ -282,16 +284,16 @@ Template Name: Главная
 								}
 							?>
 						</a>							
-						<p class="news-excerpt"><?php do_excerpt(get_the_excerpt(), 10); ?></p>
-						<p class="news-more"><a class="btn btn-sm btn-danger" href="<?php the_permalink(); ?>">Подробнее</a></p>
+						<p class="news-excerpt"><?php do_excerpt(get_the_excerpt(), 8); ?></p>						
+						<p class="news-more"><a href="<?php the_permalink(); ?>">Подробнее</a></p>
 						<p class="news-cat"><span class="cat-bold">Рубрика:&nbsp;</span><?php $category = get_the_category(); echo $category[0]->cat_name; ?></p>
-						<p class="news-tags"><span class="tag-bold">Теги:&nbsp;</span>Школа, Занятия, Капоэйра</p>
+						<p class="news-tags"><span class="tag-bold">Теги:&nbsp;</span>Школа, Занятия, Капоэйра</p>						
 					</div>							
 				<?php endforeach; wp_reset_postdata(); ?>
 			</div><!-- .row .news -->
 			<div class="row" style="margin-top:20px;">
-				<div class="col-xs-12 col-md-12 col-sm-12 col-xs-12 text-center">
-					<a class="btn btn-danger" href="/news">Смотреть все новости >></a>
+				<div class="col-xs-12 text-right more-news-block">
+					<a class="more-news" href="/news">Смотреть все новости >></a>
 				</div>
 			</div>
 		</div><!-- .container -->
@@ -311,7 +313,7 @@ Template Name: Главная
 					foreach($custom_posts as $post) : setup_postdata($post); 
 				?>
 				<div class="col-xs-3 col-md-3 col-sm-3 col-xs-3">
-					<a href="<?php the_permalink(); ?>"><h3 class="news-header text-center"><?php the_title(); ?></h3></a>
+					<a href="<?php the_permalink(); ?>"><h3 class="news-header text-center"><?php echo wp_trim_words( get_the_title(), 5 ); ?></h3></a>
 					<a href="<?php the_permalink(); ?>" class="thumbnail">
 						<?php 
 							if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
