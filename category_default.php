@@ -39,7 +39,7 @@
 									the_post_thumbnail('thumbnail', array('class' => 'img-responsive cust-cap-full'),'full');
 								} 
 								else {
-									echo '<img class="img-responsive cust-cap-full" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo.jpg" />';										
+									echo '<img class="img-responsive cust-cap-full" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_ifnothumb.jpg" />';										
 								}
 							?>
 						</a>

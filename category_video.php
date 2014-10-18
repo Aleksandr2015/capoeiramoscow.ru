@@ -12,19 +12,17 @@
 		<!-- News / Start -->
 		<div class="container" style="padding:0;">
 			<div class="row" style="padding-top:20px;">
-					<div class="col-xs-12">
-						<div class="btn-group btn-breadcrumb">
-							<a href="<?php bloginfo('url'); ?>" class="btn btn-default"><i class="glyphicon glyphicon-home"></i></a>
-							<?php
-								// Get the ID of a given category
-								$category_id = get_cat_ID( 'Видео' );
-								// Get the URL of this category
-								$category_link = get_category_link( $category_id );
-							?>							
-							<a href="<?php echo esc_url( $category_link ); ?>" title="<?php echo get_cat_name(16);?>" class="btn btn-danger"><?php echo get_cat_name(16);?></a>														
+				<div class="col-xs-12">
+					<div class="breadcrumb">
+						<a href="<?php bloginfo('url'); ?>" class="bread-home-page">Главная</a>						
+						<span class="bread-divider">/</span>
+						<span class="bread-current-page">Видео</span>
+						<div class="cos-share pull-right">
+						   <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>
 						</div>
-						<hr>
-					</div>
+				    </div>						
+				</div>
 			</div><!-- .row -->
 
 			<div class="row">
@@ -39,7 +37,7 @@
 									the_post_thumbnail('thumbnail', array('class' => 'img-responsive cust-cap-full'),'full');
 								} 
 								else {
-									echo '<img class="img-responsive cust-cap-full" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo.jpg" />';										
+									echo '<img class="img-responsive cust-cap-full" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_ifnothumb.jpg" />';										
 								}
 							?>
 						</a>					

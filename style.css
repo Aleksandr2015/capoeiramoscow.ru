@@ -792,16 +792,18 @@ a:hover, a:active, a:focus {
 }
 /* custom styles / end */
 
-
-
 /*breadcrumbs*/
 
 .breadcrumb {
-    font-size: 10px;
+    font-size: 17px;
     font-weight: 400;
     text-transform: uppercase;        
 }
 
+.bread-titles-wrap {
+    max-width: 870px;
+    display: inline-block;
+}
 .bread-divider {
     margin: 0 10px;
     font-family: 'pf_dintext_promedium';
@@ -820,12 +822,17 @@ a:hover, a:active, a:focus {
     letter-spacing: .5px;
 }
 
+.cos-share {
+    position: relative;
+    left: 10px;
+}
+
 
 /* breadcrumbs on each pages */
 
-.category-news .bread-current-page {
+/*.category-news .bread-current-page {
     color: #016EB1;
-}
+}*/
 
 .wpcf7-form br {display: none;}
 

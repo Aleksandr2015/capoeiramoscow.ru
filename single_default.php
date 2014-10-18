@@ -12,26 +12,25 @@
 		<!-- News / Start -->
 		<div class="container" style="padding:0;">
 			<div class="row" style="padding-top:20px;">
-					<div class="col-xs-12">
-						<div class="btn-group btn-breadcrumb">
-							<a href="<?php bloginfo('url'); ?>" class="btn btn-default"><i class="glyphicon glyphicon-home"></i></a>
-							<?php
-								// Get the ID of a given category
-								$category_id = get_cat_ID( 'Новости' );
-								// Get the URL of this category
-								$category_link = get_category_link( $category_id );
-							?>							
-							<a href="<?php echo esc_url( $category_link ); ?>" title="<?php echo get_cat_name(1);?>" class="btn btn-default">Новости</a>
-							<a href="<?php the_permalink();?>" class="btn btn-danger"><?php the_title();?></a>							
+				<div class="col-xs-12">
+					<div class="breadcrumb">
+					    <div class="bread-titles-wrap">
+                            <a href="<?php bloginfo('url'); ?>" class="bread-home-page">Главная</a>												
+                            <span class="bread-divider">/</span>
+                            <span class="bread-current-page"><?php the_title(); ?></span>
 						</div>
-						<hr>
-					</div>
+						<div class="cos-share pull-right">
+						   <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>
+						</div>
+				    </div>						
+				</div>
 			</div><!-- .row -->
 
 			<div class="row">
 				<div class="col-xs-8">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-						<h3 style="margin-top:0;font-size:130%;"><?php the_title(); ?></h3>
+<!--						<h3 style="margin-top:0;font-size:130%;"><?php the_title(); ?></h3>-->
 						<hr style="margin-bottom:5px;">
 						<p class="text-left" style="color:#777;"><small>Дата публикации: <?php echo get_the_date('d.m.Y'); ?></small></p>
 						<a class="thumbnail" href="<?php the_permalink(); ?>">
@@ -40,7 +39,7 @@
 									the_post_thumbnail('thumbnail', array('class' => 'img-responsive'),'full');
 								} 
 								else {
-									echo '<img style="width:100%;" class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo.jpg" />';										
+									echo '<img style="width:100%;" class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_ifnothumb.jpg" />';										
 								}
 							?>
 						</a>

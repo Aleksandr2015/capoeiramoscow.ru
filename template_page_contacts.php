@@ -151,14 +151,18 @@ Template Name: Контакты
         
         <div class="container"  >
             <div class="row" style="padding-top:20px;">
-                <div class="col-xs-12">
-                    <div class="btn-group btn-breadcrumb">
-                        <a href="<?php bloginfo('url'); ?>" class="btn btn-default"><i class="glyphicon glyphicon-home"></i></a>
-                        <a href="#" class="btn btn-danger"><?php the_title(); ?></a>
-                    </div>
-                    <hr>
-                </div>
-            </div><!-- .row -->
+				<div class="col-xs-12">
+					<div class="breadcrumb">
+						<a href="<?php bloginfo('url'); ?>" class="bread-home-page">Главная</a>												
+						<span class="bread-divider">/</span>
+						<span class="bread-current-page">Контакты</span>
+						<div class="cos-share pull-right">
+						   <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>
+						</div>
+				    </div>						
+				</div>
+			</div><!-- .row -->
         </div>
        
         <?php include(TEMPLATEPATH . '/maps-address.php'); ?>
