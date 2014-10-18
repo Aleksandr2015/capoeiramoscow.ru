@@ -6,23 +6,29 @@
 					<a href="<?php bloginfo('url'); ?>">
                         <?php
                             if (is_page('trainings')) {
-                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_green.jpg" alt="Abada Capoeira Moscow" />';
-                            } elseif (is_page('gallery')) {
-                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_green.jpg" alt="Abada Capoeira Moscow" />';
-                            } elseif (is_category('news')) {
-                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow" />';
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_green.jpg" alt="Abada Capoeira Moscow">';
                             } elseif (is_page('group_show')) {
-                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow" />';
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_green.jpg" alt="Abada Capoeira Moscow">';
+                            } elseif (is_page('gallery')) {
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo.jpg" alt="Abada Capoeira Moscow">';
+                            } elseif (is_category('news')) {
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow">';
+                            } elseif (is_page('group_show')) {
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow">';
                             } elseif (is_page('childrens')) {
-                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_yellow.jpg" alt="Abada Capoeira Moscow" />';
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo.jpg" alt="Abada Capoeira Moscow">';
                             } elseif (is_page('o-shkole')) {
-                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_yellow.jpg" alt="Abada Capoeira Moscow" />';
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow">';
                             } elseif (is_page('classes')) {
-                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_yellow.jpg" alt="Abada Capoeira Moscow" />';
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow">';
                             } elseif (is_page('coach')) {
-                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_yellow.jpg" alt="Abada Capoeira Moscow" />';
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow">';
+                            } elseif (is_page('music')) {
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow">';
+                            } elseif (is_page('contacts')) {
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_green.jpg" alt="Abada Capoeira Moscow">';
                             } else {
-                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo.jpg" alt="Abada Capoeira Moscow" />';
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo.jpg" alt="Abada Capoeira Moscow">';
                             }
                         ?>
                     </a>    

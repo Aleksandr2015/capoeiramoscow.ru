@@ -13,15 +13,20 @@
 		<div class="container" style="padding:0;">
 			<div class="row" style="padding-top:20px;">
 					<div class="col-xs-12">
-						<div class="btn-group btn-breadcrumb">
-							<a href="<?php bloginfo('url'); ?>" class="btn btn-default"><i class="glyphicon glyphicon-home"></i></a>
+						<div class="breadcrumb">
+							<a href="<?php bloginfo('url'); ?>" class="bread-home-page">Главная</a>
 							<?php
 								// Get the ID of a given category
 								$category_id = get_cat_ID( 'Новости' );
 								// Get the URL of this category
 								$category_link = get_category_link( $category_id );
 							?>							
-							<a href="<?php echo esc_url( $category_link ); ?>" title="<?php echo get_cat_name(1);?>" class="btn btn-danger">Новости</a>														
+							<span class="bread-divider">/</span>
+							<span class="bread-current-page">Новости</span>
+							<div class="cos-share pull-right">
+							    <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+                                <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>
+							</div>
 						</div>
 						<hr>
 					</div>
