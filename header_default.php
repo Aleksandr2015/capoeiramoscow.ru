@@ -21,6 +21,8 @@
         <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/ico/favicon.png">
         <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/ico/favicon.ico">
         <link rel="icon" href="<?php echo get_template_directory_uri();?>/ico/favicon.ico" type="image/x-icon">
+    <!-- yandex verification code -->
+        <meta name='yandex-verification' content='55fce8015d237c7a' />
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
