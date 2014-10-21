@@ -819,6 +819,12 @@ a:hover, a:active, a:focus {
 }
 /* custom styles / end */
 
+
+/*tags*/
+.single-tags, .single-tags a {
+    color: #777;
+}
+
 /*breadcrumbs*/
 
 .breadcrumb {

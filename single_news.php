@@ -36,6 +36,10 @@
 						
 						<?php the_content();?>
 						
+						<?php
+                            echo get_the_tag_list('<p class="single-tags"><small>Теги: ',', ','</small></p>');
+                        ?>
+						
 						<!-- Next post links / Start -->
 						
 						<ul class="pagination" style="position:fixed;left:-3px;top:50%;z-index:999;">

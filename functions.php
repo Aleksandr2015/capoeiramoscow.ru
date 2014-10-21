@@ -270,6 +270,208 @@ if ( function_exists('register_sidebar') ) {
 */
 
 }
+
+/** 
+ * Выводит заголовок страницы <title>
+ *
+ * Для меток и категорий указывается в настройках, в описании: [title=Заголовок].
+ * Для записей, если нужно, чтобы заголовок страницы отличался от заголовка записи, 
+ * создайте произвольное поле title и впишите туда произвольный заголовок.
+ *
+ * @ $sep - разделитель
+ * @ $add_blog_name - добавлять ли название блога в конец заголовка для архивов (true|false)
+ *
+ * version 2.0
+ */
+function kama_meta_title( $sep = " » ", $add_blog_name = true ){
+	global $wp_query, $post;
+
+	if( $add_blog_name )
+		$add_blog_name = $sep . get_bloginfo('name');
+	
+    if( is_front_page() )
+		$out = get_bloginfo('name') .' - '. get_bloginfo('description');
+    
+    elseif( is_page() )
+		$out = get_the_title() .' | '. get_bloginfo('name');
+
+	elseif( is_category() || is_tag() || is_tax() ){
+		if( $desc = $wp_query->get_queried_object()->description ) 
+			preg_match ('!\[title=(.*)\]!iU', $desc, $match);
+
+		if( $match[1] )
+			$out = $match[1];
+		elseif( is_tax() ) {
+			$term = get_queried_object();  
+			if ( $term ) {
+				$tax = get_taxonomy( $term->taxonomy );  
+				$out = single_term_title( $tax->labels->name . $sep, false );  
+			}
+		}
+		else {
+			$out = single_term_title( '', 0 );
+		}
+
+		$out .= $add_blog_name;
+	}
+
+	elseif( is_singular() || ( is_home() && !is_front_page() ) || ( is_page() && !is_front_page() ) ){
+
+		$before_out = ( isset($wp_query->query_vars['cpage']) ) ? "Комментарии {$wp_query->query_vars['cpage']}: " : '';
+
+		if( $post->post_type == 'func' ){
+			$cterms = get_the_terms( $post->ID, array('wpfunccat') );
+			$cterm = array_shift($cterms);
+			$out = single_post_title( '', false ) . '() - '. ($cterm->slug=='classes'?'класс':'функция') .' WordPress'; 
+		} else {
+			$out = ( $free_title = get_post_meta($post->ID, "title", true) ) ? $free_title : single_post_title( '', false );
+		}
+
+		$out = $before_out . $out;
+	}
+
+	elseif ( is_author() ){
+		$author = get_queried_object();  
+		$out = 'Статьи автора: '. $author->display_name . $add_blog_name;
+	}
+
+	elseif ( is_day() || is_month() || is_year() ){
+		$rus_month = array('','янваль','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябть','ноябрь','декабрь');
+		$rus_month2 = array('','янваля','февраля','марта','апреля','мая','июня','июля','августа','сентября','октябтя','ноября','декабря');
+		$year = get_query_var('year');  
+		$monthnum = get_query_var('monthnum');  
+		$day = get_query_var('day'); 
+
+		if( is_year() )
+			$dat = "$year год";
+		elseif( is_month() )
+			$dat = "$rus_month[$monthnum] $year года";
+		elseif( is_day() )
+			$dat = "$day $rus_month2[$monthnum] $year года";
+
+		$out = 'Архив за '. $dat . $add_blog_name;	
+	}
+
+	elseif ( is_search() ) 
+		$out = 'Результаты поиска по запросу: '. get_query_var('s');
+
+	elseif ( is_404() ) 
+		$out = "Ошибка 404: такой страницы не существует";
+
+	else
+		$out = wp_title($sep, 0, 'right');
+
+	// номера страниц для пагинации и деления записи
+	$page = ( $page = get_query_var('paged') ) ? $page : get_query_var('page');
+	if( $page )
+		$out = "$out (страница $page)";
+
+	return print $out;
+}
+
+/**
+ * Выводит метатег description
+ * 
+ * Для страниц меток, категорий и таксономий указывается в настройках: [description=текст описания]
+ * У постов сначала проверяется, произвольное поле description, если оно есть описание берется от туда, 
+ * если его нет, то проверяется "цитата", если цитаты нет, то описание берется как начальная часть контента.
+ * Цитата или контент обрезаются до указаного во втором параметре числа символо.
+ * 
+ * @ $home_description - указывается описание для главной страницы сайта.
+ * @ $maxchar - Максимальная длина описания (в символах).
+ *
+ * version 0.1
+ */
+function kama_meta_description( $home_description = 'ABADA Capoeira в Москве. Направления, адреса залов, новости, видео, фото.', $maxchar = 250 ){
+	global $wp_query, $post;
+
+	if( is_front_page() ) 
+		$out = $home_description;
+    
+    elseif ( is_page('contacts') ) 
+		$out = 'Адреса залов, интерактивная карта расположения, фото наших залов, телефоны для связи.';
+
+	elseif( is_singular() ){
+		if ( $description = get_post_meta($post->ID, "description", true) )
+			$out = $description;
+		elseif( $post->post_excerpt != '' )
+			$out = $post->post_excerpt;
+		else
+			$out = $post->post_content;
+
+		$out = trim( strip_tags( $out ) );
+
+		$char = iconv_strlen( $out, 'utf-8' );
+		if( $char > $maxchar ){
+			$out = iconv_substr( $out, 0, $maxchar, 'utf-8' );
+			$words = explode(' ', $out ); 
+			$maxwords = count($words) - 1; //убираем последнее слово, ибо оно в 90% случаев неполное
+			$out = join(' ', array_slice($words, 0, $maxwords)).' ...';
+		}
+	}
+	elseif( is_category() || is_tag() || is_tax() ){
+		if( $desc = $wp_query->queried_object->description ) 
+			preg_match ('!\[description=(.*)\]!iU', $desc, $match);
+		$out = $match[1] ? $match[1] : '';
+	}
+
+	if( $out ){
+		$out = str_replace( array("\n", "\r"), ' ', $out );
+		$out = preg_replace("@\[[^\]]+]\]@", '', $out); //удаляем шоткоды
+		echo '<meta name="description" content="'. esc_attr($out) .'" />'."\n";
+	}
+	return;
+}
+
+/** 
+ * Генерирует метатег keywords для head части сайта
+ *
+ * Чтобы задать свои keywords для записи, создайте произвольное поле keywords и впишите в значения необходимые ключевые слова. 
+ * Для постов (post) ключевые слова генерируются из меток и названия категорий, если не указано произвольное поле keywords.
+ *
+ * Для меток, категорий и произвольных таксономий, ключевые слова указываются в описании, в шоткоде: [keywords=слово1, слово2, слово3]
+ *
+ * @ $home_keywords: Для главной, ключевые слова указываются в первом параметре: kama_meta_keywords( 'слово1, слово2, слово3' );
+ * @ $def_keywords: сквозные ключевые слова - укажем и они будут прибавляться к остальным на всех страницах 
+ *
+ * version 0.2
+ */
+function kama_meta_keywords( $home_keywords = 'капоэйра, капуэйра, капуэро, capoeira, kapoeira, капоэйра в москве, капоэйра москва, capoeira moscow, capoeiramoscow, алексей найденов, alexey naydenov, найденов алексей, алексей найденов капоэйра, градуадо фалкао, фалькао, graduado falcao, абада капоэйра, abada capoeira, капоэйра занятия, капоэйра тренер, jogos brasileiros, jogos mundiais, jogos europeos, местре камиза, зелёный пояс, капоэйра шоу группа, выступление на корпоративах, бразильские барабаны, бразильская перкуссия, шоу бразильских барабанов, шоу бразильской прекуссии, batucada batykada batukada batycada, батукада, бразильская батукада', $def_keywords = '' ){
+	global $wp_query, $post;
+
+	$out = '';
+
+	if ( is_front_page() ){
+		$out = $home_keywords;
+	}
+	elseif( is_singular() ){
+		$out = get_post_meta($post->ID, 'keywords', true);
+
+		// для постов указываем ключами метки и категории, если не указаны ключи в произвольном поле
+		if( ! $out && $post->post_type == 'post' ){
+			$res = wp_get_object_terms( $post->ID, array('post_tag', 'category'), array('orderby' => 'none') ); // получаем категории и метки
+			if( $res ) 
+				foreach( $res as $tag )
+					$out .= ", $tag->name";
+
+			$out = ltrim($out, ', ');
+		}
+	}
+	elseif ( is_category() || is_tag() || is_tax() ){
+		if( $desc = $wp_query->queried_object->description ){
+			preg_match( '!\[keywords=([^\]]+)\]!iU', $desc, $match );
+			$out = $match[1] ? $match[1] : '';
+		}
+	}
+	
+	if( $out && $def_keywords )
+		$out = $out .', '. $def_keywords;
+
+	if ( $out ) 
+		return print "<meta name=\"keywords\" content=\"$out\" />\n";
+
+	return false;
+}
 	
 #все новые функции писать до этого комментария
 	
