@@ -15,6 +15,8 @@
                                 echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow">';
                             } elseif (is_page('group_show')) {
                                 echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow">';
+                            } elseif (in_category('news')) {
+                                echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo_blue.jpg" alt="Abada Capoeira Moscow">';
                             } elseif (is_page('childrens')) {
                                 echo '<img class="img-responsive" src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/capoeira_logo.jpg" alt="Abada Capoeira Moscow">';
                             } elseif (is_page('o-shkole')) {

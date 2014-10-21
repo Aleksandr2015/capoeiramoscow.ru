@@ -15,9 +15,11 @@
 				<div class="col-xs-12">
 					<div class="breadcrumb">
 					    <div class="bread-titles-wrap">
-                            <a href="<?php bloginfo('url'); ?>" class="bread-home-page">Главная</a>												
+                            <a href="<?php bloginfo('url'); ?>" class="bread-home-page color-flag-red">Главная</a>												
                             <span class="bread-divider">/</span>
-                            <span class="bread-current-page"><?php the_title(); ?></span>
+                            <a href="/news" class="bread-page color-flag-blue">Новости</a>	
+                            <span class="bread-divider">/</span>
+                            <span class="bread-current-page color-flag-blue"><?php the_title(); ?></span>
 						</div>
 						<div class="cos-share pull-right">
 						   <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
@@ -25,13 +27,9 @@
 						</div>
 				    </div>						
 				</div>
-			</div><!-- .row -->
-
-			<div class="row">
-				<div class="col-xs-12">
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<!--						<h3 style="margin-top:0;font-size:130%;"><?php the_title(); ?></h3>-->
-						<hr style="margin-bottom:5px;">
+			
+				<div class="col-xs-12 post-inner">
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>						
 						<p class="text-left" style="color:#777;"><small>Дата публикации: <?php echo get_the_date('d.m.Y'); ?></small></p>
 						
 						<?php the_content();?>

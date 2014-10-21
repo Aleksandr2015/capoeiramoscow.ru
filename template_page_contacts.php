@@ -155,7 +155,7 @@ Template Name: Контакты
 					<div class="breadcrumb">
 						<a href="<?php bloginfo('url'); ?>" class="bread-home-page">Главная</a>												
 						<span class="bread-divider">/</span>
-						<span class="bread-current-page">Контакты</span>
+						<span class="bread-current-page color-flag-green">Контакты</span>
 						<div class="cos-share pull-right">
 						   <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
                             <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>

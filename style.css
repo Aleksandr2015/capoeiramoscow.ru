@@ -9,6 +9,10 @@ Author URI: http://vk.com/aleksandr.honcharov
 
 /* body {padding-top:50px;}*/
 
+* {
+    outline: none !important;
+}
+
 body {
     background-color: #ffffff;
     background-image: url(images/nami.png);
@@ -151,6 +155,62 @@ body {
 .active.menu-item-1116 > a::after {
     border-top: 10px solid #1372ac !important;
 }
+
+.menu-item-1116.dropdown.open a.dropdown-toggle {
+    background: #1372ac; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1372ac 0%, #016eb1 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1372ac), color-stop(100%,#016eb1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #1372ac 0%,#016eb1 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #1372ac 0%,#016eb1 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #1372ac 0%,#016eb1 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #1372ac 0%,#016eb1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1372ac', endColorstr='#016eb1'); /* IE6-9 */
+}
+
+    .dropdown-menu {
+        padding: 0;
+        top:98%;
+    }
+
+    .dropdown-menu > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .dropdown-menu > .active > a {
+        background: #1372ac; /* Old browsers */
+        background: -moz-linear-gradient(top,  #1372ac 0%, #016eb1 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1372ac), color-stop(100%,#016eb1)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #1372ac 0%,#016eb1 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #1372ac 0%,#016eb1 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #1372ac 0%,#016eb1 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #1372ac 0%,#016eb1 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1372ac', endColorstr='#016eb1'); /* IE6-9 */
+    }
+
+    /*.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+        background-color: #71C9FF;
+    }*/
+
+    .dropdown-menu li a:after {
+        display: none !important;
+    }
+    
+    .dropdown-menu li:last-child {
+        overflow: hidden;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+    .dropdown-menu li:last-child a {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .dropdown-menu {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
 
 /* contacts menu item background */
 .navbar-inverse .navbar-nav > .menu-item-30 > a:hover,
@@ -817,6 +877,10 @@ a {
 a:hover, a:active, a:focus {
     color:#000;
 }
+
+.post-inner {
+    padding: 0 30px;
+}
 /* custom styles / end */
 
 
@@ -825,12 +889,39 @@ a:hover, a:active, a:focus {
     color: #777;
 }
 
+/*colors like flags*/
+
+.color-flag-red {
+    color:#E74C30;
+}
+
+    .color-flag-red:hover, .color-flag-red:active, .color-flag-red:focus {
+        color:#E74C30;
+    }
+
+.color-flag-blue {
+    color:#016EB1;
+}
+
+    .color-flag-blue:hover, .color-flag-blue:active, .color-flag-blue:focus {
+        color:#016EB1;
+    }
+
+.color-flag-green {
+    color:#005924;
+}
+
+    .color-flag-green:hover, .color-flag-green:active, .color-flag-green:focus {
+        color:#005924;
+    }
+
 /*breadcrumbs*/
 
 .breadcrumb {
     font-size: 17px;
     font-weight: 400;
     text-transform: uppercase;        
+    margin-bottom: 15px;
 }
 
 .bread-titles-wrap {
@@ -842,11 +933,21 @@ a:hover, a:active, a:focus {
     font-family: 'pf_dintext_promedium';
 }
 
+.bread-page {
+    font-family: 'pf_dintext_promedium';
+}
+
 .bread-home-page {
     font-family: 'pf_dintext_promedium';
     /*text-decoration: underline;*/
     cursor: pointer;
     letter-spacing: .5px;
+    color: #E74C30;
+    font-weight: 400;
+}
+
+.bread-home-page:hover, .bread-home-page:active, .bread-home-page:focus {
+    color: #E74C30;   
 }
 
 .bread-current-page {

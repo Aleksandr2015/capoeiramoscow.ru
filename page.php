@@ -15,8 +15,50 @@
 				<div class="col-xs-12">
 					<div class="breadcrumb">
 						<a href="<?php bloginfo('url'); ?>" class="bread-home-page">Главная</a>												
-						<span class="bread-divider">/</span>
-						<span class="bread-current-page"><?php the_title(); ?></span>
+						<span class="bread-divider">/</span>						
+						<?php 
+                            if (is_page('beginners')) {
+                                echo '<a href="/trainings.html" class="bread-page color-flag-green">Тренировки</a>
+                                        <span class="bread-divider">/</span>';                                
+                            }  
+
+                            elseif (is_page('advanced')) {
+                                echo '<a href="/trainings.html" class="bread-page color-flag-green">Тренировки</a>
+                                        <span class="bread-divider">/</span>';                                
+                            }
+
+                            elseif (is_page('seniors')) {
+                                echo '<a href="/trainings.html" class="bread-page color-flag-green">Тренировки</a>
+                                        <span class="bread-divider">/</span>';                                
+                            }
+
+                            elseif (is_page('children')) {
+                                echo '<a href="/trainings.html" class="bread-page color-flag-green">Тренировки</a>
+                                        <span class="bread-divider">/</span>';                                
+                            }
+
+                            else {
+                                echo '';
+                            }
+                        
+                        ?>
+                        <span class="bread-current-page 
+                            <?php
+                                if (is_page('beginners')) {echo 'color-flag-green';}
+                                elseif (is_page('advanced')) {echo 'color-flag-green';}
+                                elseif (is_page('seniors')) {echo 'color-flag-green';}
+                                elseif (is_page('children')) {echo 'color-flag-green';}
+                                elseif (is_page('music')) {echo 'color-flag-blue';}
+                                elseif (is_page('o-shkole')) {echo 'color-flag-blue';}
+                                elseif (is_page('classes')) {echo 'color-flag-blue';}
+                                elseif (is_page('coach')) {echo 'color-flag-blue';}
+                                elseif (is_page('group_show')) {echo 'color-flag-green';}                                
+                                else { echo '';}                                     
+                            ?>                        
+                        
+                        "><?php the_title(); ?></span>
+						
+						<?php  ?>
 						<div class="cos-share pull-right">
 						   <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
                             <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>

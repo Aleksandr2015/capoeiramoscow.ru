@@ -1,9 +1,5 @@
 <?php get_header(); ?>
-	<body <?php body_class('');?>>
-       
-        <!-- Social Buttons Fixed Left / Start -->
-		<?php include (TEMPLATEPATH . '/social_buttons.php'); ?>
-		<!-- Social Buttons Fixed Left / End -->
+	<body <?php body_class('');?>>        
               
         <?php include(TEMPLATEPATH . '/nav.php'); ?>
 		
@@ -17,7 +13,11 @@
 					    <div class="bread-titles-wrap">
                             <a href="<?php bloginfo('url'); ?>" class="bread-home-page">Главная</a>												
                             <span class="bread-divider">/</span>
-                            <span class="bread-current-page"><?php the_title(); ?></span>
+                            <a href="/gallery.html" class="bread-page color-flag-red">Галерея</a>
+                            <span class="bread-divider">/</span>
+						    <a href="/photo.html" class="bread-page color-flag-red">Видео</a>
+                            <span class="bread-divider">/</span>
+                            <span class="bread-current-page color-flag-red"><?php the_title(); ?></span>
 						</div>
 						<div class="cos-share pull-right">
 						   <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>

@@ -1,10 +1,6 @@
 <?php get_header(); ?>
 	<body <?php body_class('');?>>
        
-        <!-- Social Buttons Fixed Left / Start -->
-		<?php include (TEMPLATEPATH . '/social_buttons.php'); ?>
-		<!-- Social Buttons Fixed Left / End -->   
-       
         <?php include(TEMPLATEPATH . '/nav.php'); ?>
 		
         <?php include(TEMPLATEPATH . '/logo-and-flag-block.php'); ?>	
@@ -17,7 +13,11 @@
 					    <div class="bread-titles-wrap">
                             <a href="<?php bloginfo('url'); ?>" class="bread-home-page">Главная</a>												
                             <span class="bread-divider">/</span>
-                            <span class="bread-current-page"><?php the_title(); ?></span>
+                            <a href="/gallery.html" class="bread-page color-flag-red">Галерея</a>
+                            <span class="bread-divider">/</span>
+                            <a href="/photo" class="bread-page color-flag-red">Фото</a>
+                            <span class="bread-divider">/</span>
+                            <span class="bread-current-page color-flag-red"><?php the_title(); ?></span>
 						</div>
 						<div class="cos-share pull-right">
 						   <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
@@ -28,7 +28,7 @@
 			</div><!-- .row -->
 
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-xs-8">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <!--						<h3 style="margin-top:0;font-size:130%;"><?php the_title(); ?></h3>-->
 						<hr style="margin-bottom:5px;">
@@ -60,7 +60,24 @@
 						
 												
 					<?php endwhile; endif; ?>																				
-				</div>				
+				</div>	
+				<div class="col-xs-4 col-md-4 col-sm-4 col-xs-4">
+					<h3 style="margin-top:0;font-size:100%;">Присоединяйтесь к нам в социальных сетях</h3>
+					<!--<a href="#search">Search</a>
+					<div id="search">
+						<button type="button" class="close">×</button>
+						<form>
+							<input type="search" value="" placeholder="type keyword(s) here" />
+							<button type="submit" class="btn btn-primary">Search</button>
+						</form>
+					</div>-->
+					<script type="text/javascript" src="//vk.com/js/api/openapi.js?113"></script>
+					<!-- VK Widget -->
+					<div id="vk_groups"></div>
+					<script type="text/javascript">
+					VK.Widgets.Group("vk_groups", {mode: 0, width: "360", height: "360", color1: 'ffffff', color2: '2B587A', color3: 'F07762'}, 13967237);
+					</script>
+				</div>			
 			</div><!-- .row .homepage_wish_thumbs -->			
 		</div>
 		<!-- Photo / End -->
