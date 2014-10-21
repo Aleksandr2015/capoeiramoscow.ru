@@ -290,10 +290,13 @@ function kama_meta_title( $sep = " » ", $add_blog_name = true ){
 		$add_blog_name = $sep . get_bloginfo('name');
 	
     if( is_front_page() )
-		$out = get_bloginfo('name') .' - '. get_bloginfo('description');
+		$out = get_bloginfo('name').' - '.'Главная';
     
     elseif( is_page() )
-		$out = get_the_title() .' | '. get_bloginfo('name');
+		$out = get_bloginfo('name').' - '. get_the_title();
+    
+    elseif( in_category('news') )
+		$out = get_bloginfo('name').' - '.'Новости';
 
 	elseif( is_category() || is_tag() || is_tax() ){
 		if( $desc = $wp_query->get_queried_object()->description ) 
