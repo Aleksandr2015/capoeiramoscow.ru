@@ -50,7 +50,7 @@
 												
 					<?php endwhile; endif; ?>																				
 				</div>
-				<div class="col-xs-4 col-md-4 col-sm-4 col-xs-4">
+				<div class="col-xs-4">
 					<h3 style="margin-top:0;font-size:100%;">Присоединяйтесь к нам в социальных сетях</h3>
 					<!--<a href="#search">Search</a>
 					<div id="search">
