@@ -3,7 +3,7 @@
                 <div class="col-xs-12 text-center">
                     <hr>
                     <p>©&nbsp;<?php echo date('Y'); ?>&nbsp;|&nbsp;Алексей Найденов&nbsp;|&nbsp;capoeiramoscow.ru</p>
-                    <p style="font-size:14;">
+                    <p style="font-size:12px;">
                         Разработка сайта&nbsp;
                         <a style="text-decoration:underline;" target="_blank" href="http://wd.honcharovs.com/">Александр Гончаров</a>
                     </p>

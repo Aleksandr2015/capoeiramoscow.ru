@@ -418,6 +418,14 @@ h1,h2,h3,h4,h5,h6 {
     font-family:'pf_din_text_cond_proregular';
 }
 
+.news-more a {
+    color: #90939B;
+}
+
+.news-more a:hover {
+    color: #000;    
+}
+
 .more-news {    
     display: inline-block;
     margin-top: 10px;
@@ -476,7 +484,12 @@ h1,h2,h3,h4,h5,h6 {
 
 .capoeira-banner {
 	position:relative;
-	margin-top:-185px;
+	margin-top:-125px;
+}
+
+.capoeira-banner img {
+    width: 62% !important;
+    margin: 0 auto;
 }
 
 .capoeira-descr {

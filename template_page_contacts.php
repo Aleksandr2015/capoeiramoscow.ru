@@ -7,7 +7,7 @@ Template Name: Контакты
      
         <!-- Social Buttons Fixed Left / Start -->
 		<?php include (TEMPLATEPATH . '/social_buttons.php'); ?>
-		<!-- Social Buttons Fixed Left / End --> 
+		<!-- Social Buttons Fixed Left / End -->
       
         <!-- Modal big-filevskaya-01 -->
         <div class="modal fade" id="big-filevskaya-01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -177,7 +177,7 @@ Template Name: Контакты
 						<p class="text-center c-font-lg">Алексей Найденов</p>
 						<p class="text-center c-font-md c-simmetr">По вопросам тренировок для взрослых и тренировок для детей</p>
 						<p class="text-center c-font-lg">8 (926) 671-39-29</p>
-						<p class="text-center c-font-lg">falcaoabada@gmail.com</p>
+						<p class="text-center c-font-lg">falcaoabada@gmail.com</p>						
 					</div>
 				</div><!-- .col-xxx -->
 				<div class="col-xs-4 col-md-4 col-sm-4 col-xs-4 col-xs-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">

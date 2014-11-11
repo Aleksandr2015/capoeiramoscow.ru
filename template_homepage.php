@@ -263,8 +263,14 @@ Template Name: Главная
 				</div>
 				<div class="col-xs-4 text-center">
 				    <img class="thumbnail" src="<?php echo get_template_directory_uri();?>/images/capoeira_banner_childrens.jpg" alt="Капоэйра для детей">
-				</div>
+				</div>				
 -->
+				<div class="col-xs-12">
+                    <h3 class="fs24 text-center">Дед мороз и снегурочка, Новогоднее шоу акробатики!</h3><br>                            
+                    <img class="thumbnail" src="<?php echo get_template_directory_uri();?>/images/ded-moroz-i-snegurochka-novogodnee-shou-akrobatiki.png" alt="" width="100%">                             
+                    <p class="text-left" style="margin-top:10px;">Только у нас новое необычное шоу капоэйры и акробатики: Дед Мороз и Снегурочка Акробаты! Не забываемое представление и неповторимое поздравление у вас в офисе, на корпоративе, вечеринке! Пригласите нас и мы сделаем ваш праздник фееричным!!</p>                            
+                </div>            
+            
 				<?php
 					global $post; 
 					$args = array('category' => 1, 'showposts' => 4);
@@ -304,15 +310,14 @@ Template Name: Главная
 			<div class="row video">
 				<h2 class="text-center mt40 mb20">Видео</h2>
 			</div>			
-			<hr>
-			<div class="row video">
+			<div class="row news">
 				<?php
 					global $post; 
 					$args = array('category' => 16, 'showposts' => 4);
 					$custom_posts = get_posts($args);
 					foreach($custom_posts as $post) : setup_postdata($post); 
 				?>
-				<div class="col-xs-3 col-md-3 col-sm-3 col-xs-3">
+				<div class="col-xs-3 news-col">
 					<a href="<?php the_permalink(); ?>"><h3 class="news-header text-center"><?php echo wp_trim_words( get_the_title(), 5 ); ?></h3></a>
 					<a href="<?php the_permalink(); ?>" class="thumbnail">
 						<?php 
@@ -326,13 +331,12 @@ Template Name: Главная
 					</a>
 				</div>
 				<?php endforeach; wp_reset_postdata(); ?>			
-			</div>			
-			<hr>
-			<div class="row all-video">
-				<div class="col-xs-12 col-md-12 col-sm-12 col-xs-12 text-center">
-					<a class="btn btn-danger" href="/video">Смотреть все видео >></a>
+			</div>						
+            <div class="row" style="margin-top:20px;">
+				<div class="col-xs-12 text-right more-news-block">
+					<a class="more-news" href="/video">Смотреть все видео >></a>
 				</div>
-			</div>
+			</div>						
 		</div><!-- .container -->
 		<!-- Video / End -->
 		
@@ -340,16 +344,15 @@ Template Name: Главная
 		<div class="container">
 			<div class="row photo">
 				<h2 class="text-center mt40 mb20">Фото</h2>				
-			</div>			
-			<hr>
-			<div class="row photo">
+			</div>						
+			<div class="row news">
 				<?php
 					global $post; 
 					$args = array('category' => 17, 'showposts' => 4);
 					$custom_posts = get_posts($args);
 					foreach($custom_posts as $post) : setup_postdata($post); 
 				?>
-				<div class="col-xs-3 col-md-3 col-sm-3 col-xs-3">
+				<div class="col-xs-3 news-col">
 					<a href="<?php the_permalink(); ?>"><h3 class="news-header text-center"><?php the_title(); ?></h3></a>
 					<a href="<?php the_permalink(); ?>" class="thumbnail">
 						<?php 
@@ -364,10 +367,9 @@ Template Name: Главная
 				</div>
 				<?php endforeach; wp_reset_postdata(); ?>
 			</div>
-			<hr>
-			<div class="row all-photo">
-				<div class="col-xs-12 col-md-12 col-sm-12 col-xs-12 text-center">
-					<a class="btn btn-danger" href="/photo">Смотреть все фото >></a>
+			<div class="row" style="margin-top:20px;">
+				<div class="col-xs-12 text-right more-news-block">
+					<a class="more-news" href="/photo">Смотреть все фото >></a>
 				</div>
 			</div>
 		</div><!-- .container -->
