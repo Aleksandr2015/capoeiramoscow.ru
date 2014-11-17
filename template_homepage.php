@@ -3,6 +3,7 @@ Template Name: Главная
 */?>
 <?php get_header(); ?>
 	<body <?php body_class('');?>>
+
         <!-- Modal big-filevskaya-01 -->
         <div class="modal fade" id="big-filevskaya-01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" style="width:813px;max-width:813px;">
@@ -18,7 +19,7 @@ Template Name: Главная
               </div>
             </div>
           </div>
-        </div>
+        </div>        
         
         <!-- Modal big-filevskaya-02 -->
         <div class="modal fade" id="big-filevskaya-02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -169,7 +170,7 @@ Template Name: Главная
 		<!-- Social Buttons Fixed Left / End -->
 		
         <?php include(TEMPLATEPATH . '/nav.php'); ?>
-		
+				
 		<!-- Logo and banner / Start -->
 		<div class="container-fluid">
 			<div class="container capoeira-banner-section">

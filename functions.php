@@ -25,7 +25,7 @@ function htm_eg_quicktags(){
 		jQuery(document).ready(function(){
 			if(typeof(QTags) !== 'undefined'){
 				QTags.addButton( 'show-all-gallery-photo', 'Перейти к архиву', '<div class="show-all-gallery-photo"><a href="/archive/photos.html">Перейти к архиву</a></div>' );
-				QTags.addButton( 'left-arrow', '&laquo;', '«');
+				QTags.addButton( 'paragraph', 'p', '<p></p>');
 			}
 		});
 	</script>
