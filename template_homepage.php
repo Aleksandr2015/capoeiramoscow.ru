@@ -189,7 +189,16 @@ Template Name: Главная
 		</div><!-- .container-fluid -->
 		<!-- Logo and banner / End -->		
 		
-		<!-- Top contacts / Start -->		
+		<div class="container" style="background:##F2F2F1;">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <iframe style="margin:20px auto;display:block;border:5px solid #F07762;" width="100%" height="515" src="//www.youtube.com/embed/59XRS9N_ONk?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Top contacts / Start -->		
 		<div class="container-fluid">
 			<div class="row">
 				<div class="container capoeira-top-contacts">
