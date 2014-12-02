@@ -138,32 +138,7 @@ Template Name: Главная
               </div>
             </div>
           </div>
-        </div>	
-        
-	
-        
-	    
-			
-		<!-- Link To Develop Page / Start -->
-		<style>
-			.dev-btn {
-				position:fixed;
-				top:215px;
-				right:-100px;
-				transition: all ease .7s;
-			}
-			
-			.dev-btn:hover {
-				right:-5px;
-			}
-		</style>
-<!--
-		<a class="btn btn-danger dev-btn" href="/develop.html">
-			<span class="glyphicon glyphicon-time" style="left:-3px;"></span>
-			В разработке
-		</a>
--->
-		<!-- Link To Develop Page / End -->
+        </div>
 
 		<!-- Social Buttons Fixed Left / Start -->
 		<?php include (TEMPLATEPATH . '/social_buttons.php'); ?>
@@ -189,10 +164,14 @@ Template Name: Главная
 		</div><!-- .container-fluid -->
 		<!-- Logo and banner / End -->		
 		
+		
 		<div class="container" style="background:##F2F2F1;">
             <div class="row">
                 <div class="col-xs-12 text-center">
                     <iframe style="margin:20px auto;display:block;border:5px solid #F07762;" width="100%" height="515" src="//www.youtube.com/embed/59XRS9N_ONk?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <img style="border:5px solid #F07762;margin-bottom:20px;" src="<?php echo get_template_directory_uri();?>/images/akciya-dlya-studentov-2014.jpg" alt="Новогодняя акция для студентов" width="100%">
                 </div>
             </div>
         </div>

@@ -44,7 +44,16 @@ Template Name: Дети
 						<p class="text-center">Лагеря(лето/зима)</p>
 					</a>
 				</div>				
-			</div><!-- .row -->			
+			</div><!-- .row -->	
+			
+            <div class="row">
+				<div class="col-xs-6">		
+                    <iframe class="thumbnail" width="100%" height="315" src="//www.youtube.com/embed/M3Sszw5CQtw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>                   
+                </div>
+                <div class="col-xs-6">		
+                    <iframe class="thumbnail" width="100%" height="315" src="//www.youtube.com/embed/Jm92SH7Nd70?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>    
+                </div>                
+            </div><!-- .row -->
 		</div>
 		<!-- Default Page / End -->
 		
