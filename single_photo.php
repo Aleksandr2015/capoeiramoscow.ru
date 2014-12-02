@@ -71,12 +71,13 @@
 							<button type="submit" class="btn btn-primary">Search</button>
 						</form>
 					</div>-->
-					<script type="text/javascript" src="//vk.com/js/api/openapi.js?113"></script>
-					<!-- VK Widget -->
-					<div id="vk_groups"></div>
-					<script type="text/javascript">
-					VK.Widgets.Group("vk_groups", {mode: 0, width: "360", height: "360", color1: 'ffffff', color2: '2B587A', color3: 'F07762'}, 13967237);
-					</script>
+					<script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+
+                    <!-- VK Widget -->
+                    <div id="vk_groups"></div>
+                    <script type="text/javascript">
+                    VK.Widgets.Group("vk_groups", {mode: 0, width: "360", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: 'F07762'}, 49623148);
+                    </script>
 				</div>			
 			</div><!-- .row .homepage_wish_thumbs -->			
 		</div>
