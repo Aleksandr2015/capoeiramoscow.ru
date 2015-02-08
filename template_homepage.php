@@ -170,9 +170,11 @@ Template Name: Главная
                 <div class="col-xs-12 text-center">
                     <iframe style="margin:20px auto;display:block;border:5px solid #F07762;" width="100%" height="515" src="//www.youtube.com/embed/59XRS9N_ONk?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                 </div>
+<!--
                 <div class="col-xs-12 text-center">
                     <img style="border:5px solid #F07762;margin-bottom:20px;" src="<?php echo get_template_directory_uri();?>/images/akciya-dlya-studentov-2014.jpg" alt="Новогодняя акция для студентов" width="100%">
                 </div>
+-->
             </div>
         </div>
         
